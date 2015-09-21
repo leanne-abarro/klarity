@@ -9,12 +9,12 @@
                      <form class="pure-form pure-form-stacked">
                          <fieldset>
                              <label for="email">Email</label>
-                             <input id="email" type="email" class="pure-input-1" placeholder="Email">
+                             <input id="email" type="email" placeholder="Email">
 
                              <label for="password">Password</label>
-                             <input id="password" type="password" class="pure-input-1" placeholder="Password">
+                             <input id="password" type="password" placeholder="Password">
 
-                             <button type="submit" class="pure-button pure-button-primary pure-input-1">Sign in</button>
+                             <button type="submit" class="pure-button pure-button-primary">Sign in</button>
                          </fieldset>
                      </form>
 

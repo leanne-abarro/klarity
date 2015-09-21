@@ -1039,8 +1039,3 @@ padding-right: 20px;
 .form-page label, .form-page button, .form-page [type=submit]{
 	margin-top: 1em;
 }
-
-.form-page form{
-	width: 50%;
-	margin:auto;
-}
