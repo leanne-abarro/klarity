@@ -38,6 +38,8 @@ Route::get('labels/{id}', function ($id) {
  //    return view('label',['label'=>$label]);
 });
 
+// ===== users routes =====
+
 Route::get('login', function () {
     return view('login');
 });
