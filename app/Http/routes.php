@@ -11,16 +11,31 @@
 |
 */
 
-Route::get('/', function () {
-    return view('allposts');
+Route::get('test', function () {
+    return \App\Models\Post::find(3)->labels;
+    //return \App\Models\User::find(2);
 });
 
-Route::get('post', function () {
-    return view('post');
-});
+// Route::get('/', function () {
+//     return view('allposts');
+// });
 
-Route::get('label', function () {
-    return view('label');
+// ===== posts routes =====
+
+Route::resource('posts','PostsController');
+
+
+// Route::get('post', function () {
+//     return view('post');
+// });
+
+// ===== labels routes =====
+
+Route::get('labels/{id}', function ($id) {
+
+	// $label = \App\Models\Label::find($id);
+
+ //    return view('label',['label'=>$label]);
 });
 
 Route::get('login', function () {
