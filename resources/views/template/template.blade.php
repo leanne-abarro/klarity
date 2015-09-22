@@ -41,7 +41,7 @@
          <div class="nav-menu white">
             <div class="ct-wrapper">
                <ul>
-                  <li><a href=""><i class="fa fa-home"></i> Home</a></li>
+                  <li><a href="{{url('posts')}}"><i class="fa fa-home"></i> Home</a></li>
                   <li><a href=""><i class="fa fa-pencil"></i> Blog</a></li>
                   <li><a href=""><i class="fa fa-briefcase"></i></span> Portfolio</a></li>
                   <li><a href=""><i class="fa fa-bolt"></i></span> Pages</a></li>

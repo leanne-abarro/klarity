@@ -1039,3 +1039,36 @@ padding-right: 20px;
 .form-page label, .form-page button, .form-page [type=submit]{
 	margin-top: 1em;
 }
+/*--------------------
+forms
+--------------------------------*/
+
+.create-form form {
+    padding: 1em;
+}
+
+
+.create-form form fieldset {
+    border: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.form-group {
+    flex: 0 0 50%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+div.form-group label {
+    flex: 0 0 20%;
+    margin: 1em 0;
+}
+
+div.form-group input {
+    flex: 0 0 50%;
+    margin: 1em 0;
+}

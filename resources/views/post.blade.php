@@ -26,17 +26,17 @@
                               <h5>Related Posts</h5>
                               <ul>
                                  <li>
-                                    <a href="" title="Make your personal website" rel="nofollow"><img alt="Make your personal website" src="images/related01.jpg"></a>
+                                    <a href="" title="Make your personal website" rel="nofollow"><img alt="Make your personal website" src="{{asset('images/related01.jpg')}}"></a>
                                     <div class="clr"></div>
                                     <a class="related-title" href="">Make your personal website</a>
                                  </li>
                                  <li>
-                                    <a href="" title="Commodo omittam copiosae " rel="nofollow"><img alt="Commodo omittam copiosae " src="images/related02.jpg"></a>
+                                    <a href="" title="Commodo omittam copiosae " rel="nofollow"><img alt="Commodo omittam copiosae " src="{{asset('images/related02.jpg')}}"></a>
                                     <div class="clr"></div>
                                     <a class="related-title" href="">Commodo omittam copiosae </a>
                                  </li>
                                  <li>
-                                    <a href="" title="Mea labores feugait temporibus" rel="nofollow"><img alt="Mea labores feugait temporibus" src="images/related03.jpg"></a>
+                                    <a href="" title="Mea labores feugait temporibus" rel="nofollow"><img alt="Mea labores feugait temporibus" src="{{asset('images/related03.jpg')}}"></a>
                                     <div class="clr"></div>
                                     <a class="related-title" href="">Mea labores feugait temporibus</a>
                                  </li>
@@ -49,7 +49,7 @@
                            <div class="comments-content">
                               <ol>
                                  <li class="comment">
-                                    <div class="avatar-image-container"><img src="images/avatar01.png"></div>
+                                    <div class="avatar-image-container"><img src="{{asset('images/avatar01.png')}}"></div>
                                     <div  class="comment-block">
                                        <div class="comment-header">
                                           <cite class="user"><a  href="">kin cheong tong</a></cite>
@@ -66,7 +66,7 @@
                                  </li>
 
                                  <li class="comment">
-                                    <div class="avatar-image-container"><img src="images/avatar01.png"></div>
+                                    <div class="avatar-image-container"><img src="{{asset('images/avatar01.png')}}"></div>
                                     <div  class="comment-block">
                                        <div class="comment-header">
                                           <cite class="user"><a  href="">kin cheong tong</a></cite>
