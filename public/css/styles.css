@@ -1009,6 +1009,7 @@ padding-right: 20px;
 
 .main-heading{
 	padding: 0 20px 20px 25px;
+    position: relative;
 }
 
 .form-page .main-heading{
@@ -1048,8 +1049,7 @@ forms
 }
 
 
-.create-form form fieldset,
-.login-form form fieldset {
+form fieldset {
     border: 0;
     width: 100%;
     display: flex;
@@ -1072,4 +1072,28 @@ div.form-group label {
 div.form-group input {
     flex: 0 0 50%;
     margin: 1em 0;
+}
+
+/*--------------------
+page styling
+--------------------------------*/
+
+.content-wrapper {
+    padding: 0 2em;
+}
+
+h3 {
+    font-size: 1.2em;
+    color: #21CDEC;
+}
+
+.edit-button {
+    position: absolute;
+    display: block;
+    right: 0.8em;
+    bottom: 1.3em;
+}
+
+.edit-button a {
+    color: #fff;
 }

@@ -42,9 +42,6 @@ Route::get('labels/{id}', function ($id) {
 
 Route::resource('users','UsersController');
 
-Route::get('login', function () {
-    return view('login');
-});
 
 // ===== login routes =====
 
