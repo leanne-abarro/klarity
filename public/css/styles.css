@@ -1048,7 +1048,8 @@ forms
 }
 
 
-.create-form form fieldset {
+.create-form form fieldset,
+.login-form form fieldset {
     border: 0;
     width: 100%;
     display: flex;

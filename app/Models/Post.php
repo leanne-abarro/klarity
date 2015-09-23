@@ -19,4 +19,6 @@ class Post extends Model
     public function labels(){
         return $this -> belongsToMany('App\Models\Label');
     }
+
+    protected $dates = ['created_at'];
 }

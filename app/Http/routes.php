@@ -33,9 +33,9 @@ Route::resource('posts','PostsController');
 
 Route::get('labels/{id}', function ($id) {
 
-	// $label = \App\Models\Label::find($id);
+	$label = \App\Models\Label::find($id);
 
- //    return view('label',['label'=>$label]);
+    return view('label',['label'=>$label]);
 });
 
 // ===== users routes =====
@@ -45,3 +45,13 @@ Route::resource('users','UsersController');
 Route::get('login', function () {
     return view('login');
 });
+
+// ===== login routes =====
+
+Route::get('login','LoginController@showLoginForm');
+
+Route::post('login','LoginController@processLogin');
+
+Route::get('logout','LoginController@logout');
+
+
