@@ -51,4 +51,8 @@ Route::post('login','LoginController@processLogin');
 
 Route::get('logout','LoginController@logout');
 
+// ===== comments routes =====
+
+Route::resource('comments','CommentsController');
+
 

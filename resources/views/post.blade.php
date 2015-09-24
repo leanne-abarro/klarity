@@ -84,13 +84,18 @@
                               </ol>
                               <h4><a href="">Add comment</a></h4>
                               <div class="comment-replybox-thread">
-                                 <form class="pure-form pure-form-stacked">
-                                    <fieldset>
-                                      <label for="comment">Comment</label>
-                                      <textarea id="comment" class="pure-input-1" placeholder=""></textarea>
-                                      <button type="submit" class="pure-button pure-button-primary">Publish</button>
-                                    </fieldset>
-                              </form>
+                                 {!! Form::open(['url' => 'comments']) !!}
+                                     <fieldset>
+                                         {!! Form::label('comment', 'Comment') !!}
+                                         {!! Form::textarea('comment') !!}
+
+                                         {!! Form::hidden("user_id", Auth::user() -> id)!!}
+                                         {!! Form::hidden("post_id", $post -> id)!!}
+                                         
+                                         {!! Form::submit('Publish', array('class' => 'pure-button pure-button-primary'))!!}
+                                     </fieldset>
+                                 {!! Form::close() !!}
+
                               </div>
                                                
                            </div>

@@ -5,16 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\UpdateUserRequest;
 
-class UsersController extends Controller
+class CommentsController extends Controller
 {
-    public function __construct (){
-
-         $this -> middleware('auth', ['except' => ['create','store']]);
-         $this -> middleware('profile', ['except' => ['create','store']]);
-    }
-
     /**
      * Display a listing of the resource.
      *
@@ -33,7 +26,6 @@ class UsersController extends Controller
     public function create()
     {
         //
-        return view('createUser');
     }
 
     /**
@@ -42,17 +34,13 @@ class UsersController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(\App\Http\Requests\CreateUserRequest $request)
+    public function store(Request $request)
     {
         //
-        $user = \App\Models\User::create($request -> all());
+        $comment = \App\Models\Comment::create($request -> all());
 
-        // encrypt password
 
-        $user -> password = bcrypt($user -> password);
-        $user -> save();
-
-        return redirect('login');
+        return redirect('posts');
     }
 
     /**
@@ -64,9 +52,6 @@ class UsersController extends Controller
     public function show($id)
     {
         //
-        $user = \App\Models\User::find($id);
-        
-        return view('profile',['user' => $user]);
     }
 
     /**
@@ -78,8 +63,6 @@ class UsersController extends Controller
     public function edit($id)
     {
         //
-        $user = \App\Models\User::find($id);
-        return view('editUser',compact('user')); // same as above but compact
     }
 
     /**
@@ -89,16 +72,9 @@ class UsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateUserRequest $request, $id)
+    public function update(Request $request, $id)
     {
         //
-        
-        $user = \App\Models\User::find($id);
-
-        $user -> fill($request -> all());
-
-        $user -> save();
-        return redirect('users/'.$user -> id);
     }
 
     /**

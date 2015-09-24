@@ -1074,6 +1074,11 @@ div.form-group input {
     margin: 1em 0;
 }
 
+textarea {
+	width: 100%;
+	margin-bottom: 2em;
+}
+
 /*--------------------
 page styling
 --------------------------------*/

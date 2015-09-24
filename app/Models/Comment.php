@@ -15,4 +15,14 @@ class Comment extends Model
     public function post (){
     	return $this -> belongsTo('App\Models\Post');
     }
+
+    
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = ['comment','user_id','post_id'];
+
 }

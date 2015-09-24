@@ -45,9 +45,9 @@
                   <li><a href="{{url('posts')}}"><i class="fa fa-pencil"></i> Blog</a></li>
                   <li><a href=""><i class="fa fa-briefcase"></i></span> Portfolio</a></li>
                   <li><a href=""><i class="fa fa-bolt"></i></span> Pages</a></li>
-                  <li><a href=""><i class="fa fa-user"></i></span> About</a></li>
                   @if(Auth::check()) 
                   {{-- check if a user is logged in --}}
+                  <li><a href="{{url('users/'.Auth::user() -> id)}}"><i class="fa fa-user"></i></span> About</a></li>
                   <li><a href="{{url('logout')}}"><i class="fa fa-sign-out"></i></span> Logout</a></li>
                   @else 
                   {{-- if user isn't logged in --}}
