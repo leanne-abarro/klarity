@@ -24,7 +24,7 @@
                     {!! Form::text('lastname') !!}
                     {!! $errors -> first('lastname','<p>:message</p>')!!}
 
-                    {!! Form::submit('Send')!!}
+                    {!! Form::submit('Send',array('class' => 'pure-button pure-button-primary'))!!}
                     {{-- <input type="submit" value="Send"> --}}
                 </fieldset>
             {!! Form::close() !!}

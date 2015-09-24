@@ -83,7 +83,10 @@
                                  </li>
                               </ol>
                               <h4><a href="">Add comment</a></h4>
+                              
+                              @if(Auth::check())
                               <div class="comment-replybox-thread">
+                                
                                  {!! Form::open(['url' => 'comments']) !!}
                                      <fieldset>
                                          {!! Form::label('comment', 'Comment') !!}
@@ -94,9 +97,9 @@
                                          
                                          {!! Form::submit('Publish', array('class' => 'pure-button pure-button-primary'))!!}
                                      </fieldset>
-                                 {!! Form::close() !!}
-
+                                 {!! Form::close() !!} 
                               </div>
+                            @endif
                                                
                            </div>
                         </div>

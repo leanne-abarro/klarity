@@ -17,7 +17,7 @@
                                 {!! $errors -> first('password','<p>:message</p>')!!}
                                 
                                 
-                                {!! Form::submit('Login')!!}
+                                {!! Form::submit('Login', array('class' => 'pure-button pure-button-primary'))!!}
                                 {{-- <input type="submit" value="Send"> --}}
                             </fieldset>
                         {!! Form::close() !!}
