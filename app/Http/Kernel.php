@@ -30,5 +30,6 @@ class Kernel extends HttpKernel
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'profile' => \App\Http\Middleware\ProfileFilter::class,
+        'author' => \App\Http\Middleware\AuthorFilter::class,
     ];
 }

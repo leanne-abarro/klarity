@@ -16,6 +16,9 @@ class CommentsController extends Controller
     public function index()
     {
         //
+        $comments = \App\Models\Comment::all();
+
+        return view('post',['comments' => $comments]);
     }
 
     /**
@@ -52,6 +55,9 @@ class CommentsController extends Controller
     public function show($id)
     {
         //
+        $comment = \App\Models\Comment::find($id);
+
+        return view('post',['comment' => $comment]);
     }
 
     /**

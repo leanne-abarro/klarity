@@ -21,4 +21,6 @@ class Post extends Model
     }
 
     protected $dates = ['created_at'];
+
+    protected $fillable = ['title','content','image', 'user_id'];
 }

@@ -48,43 +48,30 @@
                            <h4>2 comments:</h4>
                            <div class="comments-content">
                               <ol>
+                                 @foreach($post -> comments as $comment)
                                  <li class="comment">
-                                    <div class="avatar-image-container"><img src="{{asset('images/avatar01.png')}}"></div>
+                                    <div class="avatar-image-container">
+                                       <img src="{{asset('images/'.Auth::user() -> avatar)}}">
+                                    </div>
                                     <div  class="comment-block">
                                        <div class="comment-header">
-                                          <cite class="user"><a  href="">kin cheong tong</a></cite>
+                                          <cite class="user"><a  href="">{{$comment -> user -> firstname}} {{$comment -> user -> lastname}}</a></cite>
                                           <span class="icon user"></span>
                                           <span class="datetime secondary-text">
-                                          <a rel="nofollow" href="">March 23, 2015 at 11:50 PM</a></span>
+                                          <a rel="nofollow" href="">{{$post -> created_at -> format('M d Y')}} at {{$post -> created_at -> format('H:i')}}</a></span>
                                        </div>
-                                       <p class="comment-content">hi hi</p>
+                                       <p class="comment-content">{{$comment -> comment}}</p>
                                        <div class="comment-actions">
                                           <a class="pure-button pure-button-primary">Reply</a>
                                           <a class="pure-button pure-button-primary" href="">Delete</a>
                                        </div>
                                     </div>
                                  </li>
-
-                                 <li class="comment">
-                                    <div class="avatar-image-container"><img src="{{asset('images/avatar01.png')}}"></div>
-                                    <div  class="comment-block">
-                                       <div class="comment-header">
-                                          <cite class="user"><a  href="">kin cheong tong</a></cite>
-                                          <span class="icon user"></span>
-                                          <span class="datetime secondary-text">
-                                          <a rel="nofollow" href="">March 23, 2015 at 11:50 PM</a></span>
-                                       </div>
-                                       <p class="comment-content">hi hi</p>
-                                       <div class="comment-actions">
-                                          <a class="pure-button pure-button-primary">Reply</a>
-                                          <a class="pure-button pure-button-primary" href="">Delete</a>
-                                       </div>
-                                    </div>
-                                 </li>
+                                 @endforeach
                               </ol>
-                              <h4><a href="">Add comment</a></h4>
                               
                               @if(Auth::check())
+                              <h4><a href="">Add comment</a></h4>
                               <div class="comment-replybox-thread">
                                 
                                  {!! Form::open(['url' => 'comments']) !!}
@@ -99,6 +86,8 @@
                                      </fieldset>
                                  {!! Form::close() !!} 
                               </div>
+                              @else 
+                                 <h4><a href="{{url('login')}}">Add comment</a></h4>
                             @endif
                                                
                            </div>

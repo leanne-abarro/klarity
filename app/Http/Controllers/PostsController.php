@@ -7,7 +7,13 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 class PostsController extends Controller
-{
+{   
+    public function __construct (){
+
+         $this -> middleware('auth',['only' => ['create','store','edit','update']]);
+         $this -> middleware('author',['only' => ['create','store','edit','update']]);
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -29,6 +35,7 @@ class PostsController extends Controller
     public function create()
     {
         //
+        return view('createPost');
     }
 
     /**
@@ -40,6 +47,21 @@ class PostsController extends Controller
     public function store(Request $request)
     {
         //
+
+        $post = \App\Models\Post::create($request -> all());
+
+        //move file from temp location to images
+
+        $filename = \Carbon\Carbon::now() -> timestamp."_post.jpg";
+
+        $request -> file ('image') -> move('images', $filename);
+
+        $post -> image = $filename;
+        $post -> save();
+
+        $post -> labels() -> attach(1);
+
+        return redirect('posts/'.$post -> id);
     }
 
     /**
