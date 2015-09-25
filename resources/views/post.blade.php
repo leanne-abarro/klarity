@@ -5,13 +5,14 @@
                         <div class="post hentry uncustomized-post-template">
                            <h1 class="the-main-title single-post-title">{{$post -> title}}</h1>
                            <div class="post-meta">
-                              <div class="small">Posted by <a href="" rel="author" title="Posts bySora Templates">{{$post -> user ->firstname}} {{$post -> user ->lastname}}</a> in 
-                                 <span class="post-categories">
-                                 <a href="" rel="tag">Minimal</a>,
-                                 <a href="" rel="tag">Photography</a>,
-                                 <a href="" rel="tag">Taste</a>,
-                                 <a href="" rel="tag">Web design</a>
-                                 </span>
+                              <div class="small">Posted by <a href="" rel="author" title="Posts bySora Templates">{{$post -> user ->firstname}} {{$post -> user ->lastname}}</a> in
+                                <?php $separator = " ";?>  
+                                 @foreach($post -> labels as $label) 
+                                          <span class="post-categories">
+                                          <a href="Minimal" rel="tag">{{$separator}} {{$label -> name}}</a>
+                                          </span>
+                                          <?php $separator = ",";?>
+                                  @endforeach
                               </div>
                            </div>
                            <div class="post-body">        

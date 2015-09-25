@@ -33,11 +33,13 @@
                                     </div>
                                     <div class="clr"></div>
                                     <div class="post-meta">
-                                       <div class="small">Posted by <a href="" rel="author" title="Posts bySora Templates">{{$post -> user ->firstname}} {{$post -> user ->lastname}}</a> in 
-                                          <span class="post-categories">
-                                          @foreach($post -> labels as $label)
-                                          <a href="Minimal" rel="tag">{{$label -> name}},</a>
-                                          </span>
+                                       <div class="small">Posted by <a href="" rel="author" title="Posts bySora Templates">{{$post -> user ->firstname}} {{$post -> user ->lastname}}</a> in
+                                         <?php $separator = " ";?>  
+                                         @foreach($post -> labels as $label) 
+                                                  <span class="post-categories">
+                                                  <a href="Minimal" rel="tag">{{$separator}} {{$label -> name}}</a>
+                                                  </span>
+                                                  <?php $separator = ",";?>
                                           @endforeach
                                        </div>
                                     </div>

@@ -23,10 +23,9 @@
                                 <div class="form-group">
                                     {!! Form::label('image', 'Image Upload') !!}
                                     {!! Form::file('image') !!}
+                                    {!! $errors -> first('image','<p>:message</p>')!!} 
                                 </div>
                                 {!! Form::hidden("user_id", Auth::user() -> id)!!}
-
-                              {{--   {!! Form::hidden("label_id", '1')!!} --}}
 
                                 {!! Form::submit('Submit Post',array('class' => 'pure-button pure-button-primary'))!!}
                             </fieldset>

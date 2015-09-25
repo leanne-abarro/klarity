@@ -44,7 +44,7 @@ class PostsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(\App\Http\Requests\CreatePostRequest $request)
     {
         //
 
@@ -59,7 +59,7 @@ class PostsController extends Controller
         $post -> image = $filename;
         $post -> save();
 
-        $post -> labels() -> attach(1);
+        $post -> labels() -> attach(1); // many to many relationships
 
         return redirect('posts/'.$post -> id);
     }

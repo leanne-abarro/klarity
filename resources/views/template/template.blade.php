@@ -43,7 +43,7 @@
                <ul>
                   <li><a href="{{url('posts')}}"><i class="fa fa-home"></i> Home</a></li>
                   <li><a href="{{url('posts')}}"><i class="fa fa-book"></i> Blog</a></li>
-                  <li><a href="{{url('posts')}}"><i class="fa fa-pencil"></i> Write Post</a></li>
+                  <li><a href="{{url('posts/create')}}"><i class="fa fa-pencil"></i> Write Post</a></li>
                   {{-- <li><a href=""><i class="fa fa-briefcase"></i></span> Portfolio</a></li>
                   <li><a href=""><i class="fa fa-bolt"></i></span> Pages</a></li> --}}
                   @if(Auth::check()) 
