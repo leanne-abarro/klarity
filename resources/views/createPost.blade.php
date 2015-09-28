@@ -10,20 +10,29 @@
                         {!! Form::open(array('url' => 'posts', 'files' => true)) !!}
                             <fieldset>
                                 <div class="form-group">
-                                    {!! Form::label('title', 'Post Title') !!}
-                                    {!! Form::text('title') !!}
-                                    {!! $errors -> first('title','<p>:message</p>')!!}
+                                  {!! Form::label('title', 'Post Title') !!}
+                                  {!! Form::text('title') !!}
+                                  {!! $errors -> first('title','<p>:message</p>')!!}
                                 </div>
                                 <div class="form-group">
-                                    {!! Form::label('content', 'Content') !!}
-                                    {!! Form::textarea('content') !!}
-                                    {!! $errors -> first('content','<p>:message</p>')!!} 
+                                  {!! Form::label('content', 'Content') !!}
+                                  {!! Form::textarea('content') !!}
+                                  {!! $errors -> first('content','<p>:message</p>')!!} 
                                 </div>
                                 
                                 <div class="form-group">
-                                    {!! Form::label('image', 'Image Upload') !!}
-                                    {!! Form::file('image') !!}
-                                    {!! $errors -> first('image','<p>:message</p>')!!} 
+                                  {!! Form::label('image', 'Image Upload') !!}
+                                  {!! Form::file('image') !!}
+                                  {!! $errors -> first('image','<p>:message</p>')!!} 
+                                </div>
+
+                                <div class="form-group2">
+                                  @foreach(\App\Models\Label::all() as $label)
+
+                                    {!! Form::checkbox('labels[]',$label->id)!!}
+                                    {!! Form::label('',$label->name)!!}
+
+                                  @endforeach
                                 </div>
                                 {!! Form::hidden("user_id", Auth::user() -> id)!!}
 

@@ -52,7 +52,7 @@
                                  @foreach($post -> comments as $comment)
                                  <li class="comment">
                                     <div class="avatar-image-container">
-                                       <img src="{{asset('images/'.Auth::user() -> avatar)}}">
+                                       <img src="{{asset('images/'.$comment->user -> avatar)}}">
                                     </div>
                                     <div  class="comment-block">
                                        <div class="comment-header">

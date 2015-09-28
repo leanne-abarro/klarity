@@ -50,6 +50,8 @@ class PostsController extends Controller
 
         $post = \App\Models\Post::create($request -> all());
 
+        //dd($request -> all());
+
         //move file from temp location to images
 
         $filename = \Carbon\Carbon::now() -> timestamp."_post.jpg";
@@ -59,7 +61,14 @@ class PostsController extends Controller
         $post -> image = $filename;
         $post -> save();
 
-        $post -> labels() -> attach(1); // many to many relationships
+        $labelIDs = $request->get('labels');
+
+
+        foreach($labelIDs as $labelID){
+            $post -> labels() -> attach($labelID); // many to many relationships
+        }
+
+        
 
         return redirect('posts/'.$post -> id);
     }

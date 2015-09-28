@@ -1057,7 +1057,8 @@ form fieldset {
     flex-direction: row;
 }
 
-.form-group {
+.form-group,
+.form-group2 {
     flex: 0 0 50%;
     display: flex;
     flex-wrap: wrap;
@@ -1072,6 +1073,17 @@ div.form-group label {
 div.form-group input {
     flex: 0 0 50%;
     margin: 1em 0;
+}
+
+div.form-group2 label {
+	flex: 0 0 10%;
+    margin: 0;
+    line-height: 1em;
+}
+
+div.form-group2 input {
+    flex: 0 0 6%;
+    margin: 0;
 }
 
 textarea {
