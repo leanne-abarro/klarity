@@ -108,6 +108,16 @@ class PostsController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $post = \App\Models\Post::find($id);
+
+        $value = $request -> input("value");
+        $field = $request -> input("field");
+
+        $post -> $field = $value;
+        $post -> save();
+
+        return $value;
+
     }
 
     /**

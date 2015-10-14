@@ -3,7 +3,7 @@
                   <div class="content section single-post-page" id="content">   
                      <div class="post-outer">
                         <div class="post hentry uncustomized-post-template">
-                           <h1 class="the-main-title single-post-title">{{$post -> title}}</h1>
+                           <h1 class="the-main-title single-post-title" data-field="title">{{$post -> title}}</h1>
                            <div class="post-meta">
                               <div class="small">Posted by <a href="" rel="author" title="Posts bySora Templates">{{$post -> user ->firstname}} {{$post -> user ->lastname}}</a> in
                                 <?php $separator = " ";?>  
@@ -18,7 +18,7 @@
                            <div class="post-body">        
                               <a href="{{asset('images/'.$post -> image)}}" class="main-image"><img src="{{asset('images/'.$post -> image)}}" style="max-width:100%;" alt="Commodo omittam copiosae "></a>
                               
-                              <p>
+                              <p data-field="content">
                                  {{$post -> content}}  
                               </p>
                                  
@@ -95,6 +95,7 @@
                         </div>
                         <div class="clr"></div>
                      </div>
+                     <div id="token">{{ csrf_token() }}</div>
                      @include('template.pager')
                   </div>
 @stop

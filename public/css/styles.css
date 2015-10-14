@@ -1114,3 +1114,7 @@ h3 {
 .edit-button a {
     color: #fff;
 }
+
+#token {
+	display: none;
+}

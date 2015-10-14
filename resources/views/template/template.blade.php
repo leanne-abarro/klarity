@@ -114,7 +114,10 @@
          </div>
          <!-- end of page footer credits -->
 
-
       </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+      <script src="{{asset('js/jquery.editable.js')}}"></script>
+      <script src="{{asset('js/main.js')}}"></script>
    </body>
 </html>
