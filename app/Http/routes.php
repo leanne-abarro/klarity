@@ -55,4 +55,8 @@ Route::get('logout','LoginController@logout');
 
 Route::resource('comments','CommentsController');
 
+// ===== photos routes =====
+
+Route::resource('photos','PhotosController');
+
 

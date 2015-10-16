@@ -11,6 +11,7 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
       <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/forms-nr-min.css">
       <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/buttons-min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.2.0/dropzone.css">
      <link rel="stylesheet" href="{{asset('css/styles.css')}}">
    </head>
    <body>
@@ -119,5 +120,7 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
       <script src="{{asset('js/jquery.editable.js')}}"></script>
       <script src="{{asset('js/main.js')}}"></script>
+
+      @yield('scripts')
    </body>
 </html>

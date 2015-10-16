@@ -44,4 +44,8 @@ class User extends Model implements AuthenticatableContract,
     public function comments (){
         return $this -> hasMany('App\Models\Comment');
     }
+
+    public function photos (){
+        return $this -> hasMany('App\Models\Photo');
+    }
 }
